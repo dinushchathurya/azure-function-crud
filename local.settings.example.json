@@ -3,7 +3,7 @@
     "Values": {
             "AzureWebJobsStorage": "",
             "FUNCTIONS_WORKER_RUNTIME": "node",
-            "ACCOUNT_NAME": "<accont name>",
-            "AZURE_STORAGE_ACCESS_KEY": "<storage key>"
+            "STORAGE_NAME": "<STORAGE_NAME>",
+            "STORAGE_KEY": "<STORAGE_KEY>"
     }
 }
