@@ -7,17 +7,20 @@ var tableService = azure.createTableService(
 const insertEntity = (tableName, entity) => {
     return new Promise((resolve, reject) => {
         tableService.insertEntity(
-            tableName, 
-            entity, {
-                echoContent: true, 
-                payloadFormat: "application/json;odata=nometadata" 
-            }, (error, result, response) => {
+          tableName,
+          entity,
+          {
+            echoContent: true,
+            payloadFormat: "application/json;odata=nometadata",
+          },
+          (error, result, response) => {
             if (error) {
-                reject(error);
+              reject(error);
             } else {
-                resolve(result);
+              resolve(response.body);
             }
-        });
+          }
+        );
     });
 }
 
