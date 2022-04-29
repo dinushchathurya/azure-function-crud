@@ -8,7 +8,7 @@ module.exports = async function (context, req) {
         var query = new azure.TableQuery().where("PartitionKey eq ? and RowKey eq ?", product , id.toString());
         const result = await queryEntities("products", query);
         context.res = {
-            status: 500,
+            status: 200,
             body: result,
         }; 
     } catch (error) {
