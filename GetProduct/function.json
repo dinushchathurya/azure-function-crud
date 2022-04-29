@@ -8,7 +8,7 @@
       "methods": [
         "get"
       ],
-      "route": "GetProduct/{product}/{id}"
+      "route": "product/{product}/{id}"
     },
     {
       "type": "http",
