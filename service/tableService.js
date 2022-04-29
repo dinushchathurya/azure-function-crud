@@ -47,5 +47,23 @@ const queryEntities = (tableName, query) => {
     });
 }
 
-exports.insertEntity = insertEntity;
+/* update entity */
+const updateEntity = (tableName, entity) => {
+    return new Promise((resolve, reject) => {
+        tableService.insertOrMergeEntity(
+          tableName,
+          entity,
+          (error, result, response) => {
+            if (error) {
+              reject(error);
+            } else {
+              resolve();
+            }
+          }
+        );
+    });
+}
+
+exports.insertEntity  = insertEntity;
 exports.queryEntities = queryEntities;
+exports.updateEntity  = updateEntity;
